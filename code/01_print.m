@@ -11,7 +11,7 @@ fprintf('%d  %f  %2.2f  %e %s\n',3,3.1415926,3.1415926,12340000,'pi');
 % This opens / makes a file
 
 % sprintf (string-print-formatted) returns a string
-x = sprintf('%d  %f  %2.2f  %e\n',3,3.1415926,3.1415926,12340000);
+x = sprintf('%d  %f  %2.2f  %e\n',3,pi,pi,12340000);
 x
 fprintf(x)
 fprintf('%s',x)
