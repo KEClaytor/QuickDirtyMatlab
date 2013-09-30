@@ -1,0 +1,96 @@
+
+\section{Basics}
+
+
+\subsection{Syntax}
+
+Matlab is case-sensitive, meaning ''X'' is not the same as ''x''.
+
+Every program begins with the command \texttt{program} and ends with \texttt{end program}. You can give these labels, so that an example program might read:
+\begin{quote}
+\verbatiminput{code01/p01.m}
+\end{quote}
+\noindent Note: \texttt{!} indicates a comment. They may follow commands
+
+
+\subsection{Arithemetic}
+
+\begin{quote}
+\begin{verbatim}
+gfortran p01_program.f08
+./a.out
+\end{verbatim}
+\end{quote}
+
+\noindent The usual gcc flags work (changing the name of the output file):
+\begin{quote}
+\begin{verbatim}
+gfortran p01_program.f08 -o first.out
+./first.out
+\end{verbatim}
+\end{quote}
+
+
+\subsection{Variables}
+Fortran allows for implicit variable types, based on the first character of the variable name. They are the \texttt{real} type if they start with A-H or O-Z, and the \texttt{integer} type if they start with I-N.
+
+It is generally \emph{not recommended} to do this and to declare the variable type instead. To force this include \texttt{implicit none} at the beginning of your code.
+
+You can declare specific variables to be static (unchangable) with the \texttt{parameter} flag.
+
+Arrays may be multi-dimensional with the dimension specified by the number of indicies (each index specifies the length of that dimension).
+
+You can fill an array at once with the \texttt{(/.../)} syntax.
+\begin{quote}
+\verbatiminput{01_BasicsCode/p02_variables.f08}
+\end{quote}
+
+
+\subsection{Input and Output}
+Reading and writing from the screen:
+\begin{quote}
+\verbatiminput{01_BasicsCode/p03_echo.f08}
+\end{quote}
+\noindent You will get an error if you try to input a value other than what is expected (eg. real input when integer is expected)
+
+Formated writes
+\begin{quote}
+\verbatiminput{01_BasicsCode/p04_format.f08}
+\end{quote}
+
+\noindent Reading and writing from a file:
+\begin{quote}
+\verbatiminput{01_BasicsCode/p05_fileio.f08}
+\end{quote}
+\noindent The file is:
+\begin{quote}
+\verbatiminput{01_BasicsCode/p05_data.txt}
+\end{quote}
+
+\subsection{Code Control}
+
+Loops are handled with do:
+\begin{quote}
+\verbatiminput{01_BasicsCode/p06_do.f08}
+\end{quote}
+
+If statments can be expanded into if else with the usual set of logical operators
+ (\texttt{<, >, <=, >=, ==, /=}) and statement combinations
+ (\texttt{.and., .or., .not., .eqv., .neqv.}) supported:
+\begin{quote}
+\verbatiminput{01_BasicsCode/p07_ifelse.f08}
+\end{quote}
+
+\noindent There is also some more fine-grain loop control with:
+
+\texttt{exit} will exit a loop
+
+\texttt{cycle} passes up to the next enddo
+\begin{quote}
+\verbatiminput{01_BasicsCode/p08_doec.f08}
+\end{quote}
+
+\noindent You can also use implied do loops with parentheses:
+\begin{quote}
+\verbatiminput{01_BasicsCode/p09_doi.f08}
+\end{quote}
