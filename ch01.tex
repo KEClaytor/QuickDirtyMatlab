@@ -2,49 +2,46 @@
 \section{Basics}
 
 
-\subsection{Syntax}
-
-Matlab is case-sensitive, meaning ''X'' is not the same as ''x''.
-
-Every program begins with the command \texttt{program} and ends with \texttt{end program}. You can give these labels, so that an example program might read:
-\begin{quote}
-\verbatiminput{code01/p01.m}
-\end{quote}
-\noindent Note: \texttt{!} indicates a comment. They may follow commands
-
-
-\subsection{Arithemetic}
+\subsection{Arithemetric}
+Presumably, you're using Matlab because you would like to do some math.
+ Let's start with the basic operations:
 
 \begin{quote}
-\begin{verbatim}
-gfortran p01_program.f08
-./a.out
-\end{verbatim}
+\verbatiminput{code/01_math.m}
 \end{quote}
-
-\noindent The usual gcc flags work (changing the name of the output file):
-\begin{quote}
-\begin{verbatim}
-gfortran p01_program.f08 -o first.out
-./first.out
-\end{verbatim}
-\end{quote}
-
+\noindent Note: \texttt{%} indicates a comment.
+ They may follow commands.
+ Comments are used to help make code clearer, and more understandable by humans.
+ I will use them frequently in the examples to follow.
+ You should use them frequently in your code.
 
 \subsection{Variables}
-Fortran allows for implicit variable types, based on the first character of the variable name. They are the \texttt{real} type if they start with A-H or O-Z, and the \texttt{integer} type if they start with I-N.
+We can store numbers and letters into variables
+ Matlab is case-sensitive, meaning ''X'' is not the same as ''x''.
+ Note how we use '';'' to suppress output (or not).
 
-It is generally \emph{not recommended} to do this and to declare the variable type instead. To force this include \texttt{implicit none} at the beginning of your code.
-
-You can declare specific variables to be static (unchangable) with the \texttt{parameter} flag.
-
-Arrays may be multi-dimensional with the dimension specified by the number of indicies (each index specifies the length of that dimension).
-
-You can fill an array at once with the \texttt{(/.../)} syntax.
 \begin{quote}
-\verbatiminput{01_BasicsCode/p02_variables.f08}
+\verbatiminput{code/01_variables.m}
 \end{quote}
 
+\subsection{Printing to the Screen}
+In the example below, we'll print using
+ ''disp'',
+ ''fprintf'',
+ and ''sprintf''.
+ Note that the semicolon, '';'', will suppress output to the screen.
+ File I/O will come later, focus now on the priting commands.
+\begin{quote}
+\verbatiminput{code/01_print.m}
+\end{quote}
+
+\subsection{Vectors and Matricies}
+Great! We've got the basics out of the way.
+ Time to dive into what Matlab was made for - vectors and matricies.
+
+\begin{quote}
+\verbatiminput{code/01_matrix.m}
+\end{quote}
 
 \subsection{Input and Output}
 Reading and writing from the screen:
