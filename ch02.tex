@@ -1,0 +1,54 @@
+
+\section{Code Control}
+
+\subsection{For}
+A basic instruction is to tell the computer to do something a given number of times.
+ The ''for'' loop is usually used for this.
+
+\begin{quote}
+\verbatiminput{code/02_for.m}
+\end{quote}
+\noindent
+
+\pagebreak
+\subsection{While}
+The while loop can continue incrementing until a given condition is met.
+ This can be useful in iterating until you reach a tolerance.
+ But can also continue forever if you are not careful.
+ If this happens, use ''ctrl-C'' to stop the currently running code.
+
+\begin{quote}
+\verbatiminput{code/02_while.m}
+\end{quote}
+
+\pagebreak
+\subsection{If/Else/Elseif}
+If you need to switch between two or more conditions, if / else should be used.
+
+\begin{quote}
+\verbatiminput{code/02_ifelse.m}
+\end{quote}
+
+\pagebreak
+\subsection{Switch}
+The switch statement is useful for switching between multiple conditions.
+ It is equivalent to a string of if/elseif.
+ After one case of the switch statement is executed, the program continues \emph{after} the swtich statement.
+ This is notably different from C.
+
+\begin{quote}
+\verbatiminput{code/02_switch.m}
+\end{quote}
+
+\pagebreak
+\subsection{Vectorization}
+Matlab is interpreted, meaning that loops are not always optimized.
+ An easy way of getting more performance is to vectorize them.
+ Matlab can handle vector operations (remember it was made for matrix / vector math) \emph{much} faster than for loops.
+
+You can also use logical indexing to handle some if/then/else statements.
+ I find this often makes the code more readable as well.
+ 
+\begin{quote}
+\verbatiminput{code/02_vectorization.m}
+\end{quote}

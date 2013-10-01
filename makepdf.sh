@@ -1,4 +1,4 @@
-#!/bin/csh
+#!/bin/bash
 
 # to compile the report into a pdf document on 
 latex quickmatlab.tex
