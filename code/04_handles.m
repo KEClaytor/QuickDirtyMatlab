@@ -7,7 +7,7 @@ phi = 0;
 s = sin(2*pi*t - phi);
 c = cos(2*pi*t);
 
-figure;
+figure; hold on;
 % Plot returns a handle to the line plotted
 sinehandle = plot(t,sp,'b');
 ch = plot(t,cp,'r');
