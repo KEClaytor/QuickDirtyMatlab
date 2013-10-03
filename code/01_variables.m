@@ -27,3 +27,9 @@ a1*a2*a2
 c + c2
 c*c2
 c/c2
+
+% There are some mathematical constants built in.
+%  it would be wise to name your variables something else
+pi
+e
+i
