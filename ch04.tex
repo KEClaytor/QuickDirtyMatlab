@@ -1,0 +1,69 @@
+
+\section{Plotting}
+One of the advantages of Matlab is it's excellent plotting and support for many different plotting types.
+ I'll start by demonstrating the basics of how to plot.
+ If you're interested in a specific type of plot I would recommend the help files.
+ After the basic plots I'll show you more efficient plot updating and customization with the use of handles.
+
+\subsection{2D Plots}
+The demonstrations below show a scattering of 2D plots and their output.
+ You can find many more in Matlab's help secion on plots.
+
+\begin{quote}
+\verbatiminput{code/04_plot2d.m}
+\end{quote}
+
+\pagebreak
+\subsection{3D Plots}
+Here are some demonstration 3D plots.
+ Again these are just the basics many more examples of 3D plots can be found in the Matlab help files.
+
+\begin{quote}
+ \verbatiminput{code/04_plot3d.m}
+\end{quote}
+
+\pagebreak
+\subsection{Subplots}
+Subplots allow you to fit multiple axes within a single figure.
+
+\begin{quote}
+ \verbatiminput{code/04_subplots.m}
+\end{quote}
+
+\pagebreak
+\subsection{Plot Handles (get and set)}
+''Handles'' are a way we can use to get at the underlying components of a plot.
+ The ''get'' command returns the properties of the current handle.
+ And the ''set'' command allows you to change those properties.
+
+\begin{quote}
+\verbatiminput{code/04_handles.m}
+\end{quote}
+
+\pagebreak
+\subsection{Labels, Fonts, and Defaults}
+I'm a big believer that \emph{every plot should be labeled}.
+ Despite not having done so previously (see the exercies), I'll now show you how to do this.
+
+\begin{quote}
+\verbatiminput{code/04_labels.m}
+\end{quote}
+
+If you are finding yourself frequently setting the fontsize or weight on an axes, a better alternative is to change the axes default.
+ This process is a bit more involved.
+ Start by making a file called ''startup.m'' in your matlab base directory, eg; ''C:\Users\KEClaytor\Documents\Matlab''.
+ We'll set the properties for the default axes and figure handle (0).
+ Below is my startup.m file.
+ 
+\noindent You'll notice that I also override the default colorscale (mine has black in the middle).
+ If you choose to do this, make sure that the colorscale file appears on the path (preferably with startup.m).
+
+\pagebreak
+\subsection{Plot Legends}
+The basic plot legends are simple and easy to use.
+ Things get more complicated when you start layering components and do not want a legend for all of them.
+ We'll start having to use handles and adjust properties using them.
+
+\begin{quote}
+\verbatiminput{code/04_legends.m}
+\end{quote}
