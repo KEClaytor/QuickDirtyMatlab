@@ -21,7 +21,7 @@ phi = linspace(0,pi,8);
 my_legend = cell(size(phi));
 figure; hold on;
 for ii = 1:length(phi)
-    sp = sine(2*pi*t - phi(ii));
+    sp = sin(2*pi*t - phi(ii));
     plot(t,sp,markerspec{ii});
     my_legend{ii} = sprintf('Phase %1.2f',phi(ii));
 end
@@ -33,13 +33,14 @@ sn = s + .2*rand(size(s));
 cn = c + .2*rand(size(c));
 figure; hold on
 snh = plot(t,sn,'ko','MarkerSize',4,'MarkerFaceColor','k');
-sh = plot(t,s,'r-');
 cnh = plot(t,cn,'ko','MarkerSize',4,'MarkerFaceColor','k');
-ch = plot(t,s,'r-');
+sh = plot(t,s,'r-');
+ch = plot(t,c,'b-');
 
 % A basic label doesn't work
 legend('Noisy Data','Sine Model','Cosine Model')
 
 % But by turning off options with the handles we can get it to work
-set(cnh,........);
+%set(cnh);
+set(get(get(cnh,'Annotation'),'LegendInformation'),'IconDisplayStyle','off');
 legend('Noisy Data','Sine Model','Cosine Model')

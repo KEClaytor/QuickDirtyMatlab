@@ -7,7 +7,7 @@ y = cos(2*pi*t);
 z = t;
 
 figure;
-plot3d(x,y,z);
+plot3(x,y,z);
 
 % We can also make surface
 %  (mesh, etc.) type plots
@@ -16,4 +16,3 @@ Z = peaks(X,Y);
 
 figure; surf(Z);
 figure; mesh(Z);
-

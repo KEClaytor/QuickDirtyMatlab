@@ -9,8 +9,8 @@ c = cos(2*pi*t);
 
 figure; hold on;
 % Plot returns a handle to the line plotted
-sinehandle = plot(t,sp,'b');
-ch = plot(t,cp,'r');
+sinehandle = plot(t,s,'b');
+c = plot(t,c,'r');
 % What are these properties?
 get(sinehandle)
 

@@ -1,11 +1,12 @@
-% A function that uses a subfunction
+% [term] = fibfunc(n)
+% find the nth term in the vibbonacci sequence
 
 % fib(n) return the nth fibonacci sequence
-function [out] = fibfunc(n)
+function [out] = ch03_fibfunc(n)
 
 n1 = 0;
 n2 = 1;
-for ii = 1:n
+for ii = 1:n-1
     nnext = n2 + n1;
     n1 = n2;
     n2 = nnext;

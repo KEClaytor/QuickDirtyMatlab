@@ -29,11 +29,11 @@ xlabel(sprintf('Time up to %d %s',maxt,units));
 h = figure;
 % Upper subplot, this shouldn't have the x tick labels
 %  (they overlap with the lower axes)
-ax1 = subplot([.2,.5,.6,.4]);
+ax1 = subplot('position',[.2,.5,.6,.4]);
 plot(t,s);
 set(gca,'XTickLabel',{});
 % Lower subplot, I'll take off the y tick labels
-ax2 = subplot([.2,.1,.6,.4]);
+ax2 = subplot('position',[.2,.1,.6,.4]);
 plot(t,c);
 set(ax2,'YTickLabel',{});
 % We can also set properties of the figure
