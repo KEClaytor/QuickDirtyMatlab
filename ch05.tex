@@ -5,10 +5,10 @@ Unfortunately MATLAB really falls a bit short in input and output of files.
  We'll explore a couple of different ways for file IO below.
 
 \subsection{File Read/Write}
-We can use \verbatim{fopen}, \verbatim{fread}, and \verbatim{fprintf} for some basic file IO.
+We can use $fopen$, $fread$, and %fprintf% for some basic file IO.
 
 \begin{quote}
-\verbatiminput{code/TODO.m}
+\verbatiminput{code/ch05_fileio.m}
 \end{quote}
 
 \pagebreak
@@ -17,9 +17,12 @@ Matlab can automate the reading of most simple delimited text files.
  You can then copy Matlab code to automate the read later.
  This can only really be demonstrated with screnshots;
 
-\begin{quote}
- \verbatiminput{code/TODO.m}
-\end{quote}
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{img/path.png}
+\caption{The Matlab path window.}
+\label{overflow}
+\end{figure}
 
 \pagebreak
 \subsection{Save and Load}
@@ -27,5 +30,5 @@ Matlab also has \verbatim{save} and \verbatim{load} commands that allow for dire
  This is similar to Python's pickle module.
 
 \begin{quote}
- \verbatiminput{code/TODO.m}
+ \verbatiminput{code/ch05_saveload.m}
 \end{quote}

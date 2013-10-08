@@ -41,7 +41,7 @@ Subplots allow you to fit multiple axes within a single figure.
 \end{quote}
 
 \pagebreak
-\subsection{Labels, Fonts, and Defaults}
+\subsection{Labels and Fonts}
 I'm a big believer that \emph{every plot should be labeled}.
  Despite not having done so previously (I left this for the exercises), I'll now show you how to do this.
 
@@ -49,11 +49,16 @@ I'm a big believer that \emph{every plot should be labeled}.
 \verbatiminput{code/ch04_labels.m}
 \end{quote}
 
+\pagebreak
+\subsection{Plot Defaults}
 If you are finding yourself frequently setting the fontsize or weight on an axes, a better alternative is to change the axes default.
  This process is a bit more involved.
  Start by making a file called ''startup.m'' in your matlab base directory, eg; '$'C:\backslash Users\backslash KEClaytor\backslash Documents\backslash Matlab$''.
- We'll set the properties for the default axes and figure handle (0).
- Below is my startup.m file.
+
+Within this file you can use the customization from the prevoius sections by using $set()$ and $0$ as the object handle.
+ Whenever you start Matlab this script file is run and the commands interpreted.
+
+Below is my startup.m file.
  
 \noindent You'll notice that I also override the default colorscale (mine has black in the middle).
  If you choose to do this, make sure that the colorscale file appears on the path (preferably with startup.m).

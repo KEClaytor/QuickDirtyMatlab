@@ -21,6 +21,8 @@ To create a script, simply save a file of commands as a text file with a .m exte
 \verbatiminput{code/ch03_script.m}
 \end{quote}
 
+\pagebreak
+\subsection{Cells}
 You don't have to run an entire script at once.
  From the editor, you can select a few lines and then use the F9 key to run those.
  You can also split your code into ''cells'' with ''\%\%''.
@@ -65,7 +67,7 @@ You can use brackets to assign multiple outputs.
  [x,y] = two_outputs_of_n(n);
 \end{verbatim}
 
-You can ignore an output with the ~ character.
+You can ignore an output with the $~$ character.
 \begin{verbatim}
  [x,~,z] = you_only_want_the_first_and_third(a,b,c)
 \end{verbatim}
@@ -79,3 +81,18 @@ As mentioned above, you can use functions inside of functions.
 \begin{quote}
 \verbatiminput{code/ch03_fibsubfunc.m}
 \end{quote}
+
+
+\pagebreak
+\subsection{The Path}
+How does Matlab find your functions?
+ They can be in one of two places; the current directory or the path.
+ The path stores the list of files Matlab looks through in order to find functions and scripts.
+ Here's what it looks like in R2013a:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{img/path.png}
+\caption{The Matlab path window.}
+\label{overflow}
+\end{figure}
