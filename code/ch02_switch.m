@@ -6,7 +6,7 @@
 %         if no match
 % end
 
-x = 2
+x = 2;
 switch x
     case 1
         disp('x==1');
@@ -22,7 +22,7 @@ end
 
 % I often use it for strings
 %  but watch the case
-x = 'FOO'
+x = 'FOO';
 switch x
     case 'bar'
         disp('bar');

@@ -14,7 +14,7 @@ X
 %  but cannot start with a number
 a1 = 1;
 a2 = 2;
-2a = 3; % not allowed!
+2a = 3; % not allowed! Fix it to continue
 
 % Complex numbers can use i or j
 c = 1 + 3.2*i;
@@ -31,5 +31,6 @@ c/c2
 % There are some mathematical constants built in.
 %  it would be wise to name your variables something else
 pi
-e
+exp(1)
 i
+j

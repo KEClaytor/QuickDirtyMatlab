@@ -3,6 +3,9 @@
 x = [1 2 3 4]
 y = [1,2,4,8]
 z = [2;2;2;2]
+% A single quote transposes
+x
+x'
 % We can generate vectors with a colon
 q = 1:10
 % The syntax is start:increment:end
@@ -20,35 +23,33 @@ x + z % does not
 % Multiplication
 % inner product:
 x*z
+
+% Element-wise operators have a . prepended to them
 % element wise:
-x.*z
-x.*y % now works
+x.*y
+x.*z'   % dimensions still need to match
 
 % what about powers?
-x^3 % works
-x^x % doesn't
-x.^x % I'm not sure
+x.^3 % again elementwise
+x^x  % doesn't
+x.^x % works
 
 % Matricies
 A = [1,2,3,4;5,6,7,8;9,10,11,12;13,14,15,16]
 B = [1,2,3;4,5,6]
 
-% Again size matters
-A*x     % doesn't work
+% Transpose works with matricies in the same way
+A'
+% Again size matters when doing vector-matrix multiplication
 A*z     % works
-B*z     % doesn't
+A*x     % doesn't work
+B*z     % doesn't work
 % Solve a linear algebra system
-% TODO: make sure this command works corectly
-A/z
-
-% We can transpose matricies and vectors
-A*x'    % now works
-A'*x
+A\z
 
 % Concatanation can make the vectors longer
-%  Again, be sure to watch dimensions
 [A,z]
-[A;x]]
+[A;x]
 
 % And we can index specific elements out of the vectors
 %  The index starts with 1
@@ -66,4 +67,4 @@ A(:)
 A(1:2:end,:)    % Extract odd rows
 %  Or even mathematical expressions
 %  (This is called 'logcal' indexing)
-A( A>3 )
+A( A>3 )    % Note this flattens A
