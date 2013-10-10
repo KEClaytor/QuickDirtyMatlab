@@ -1,11 +1,14 @@
 
+\pagebreak
 \section{Input and Output}
 Unfortunately MATLAB really falls a bit short in input and output of files.
  Their GUI file importer has improved by leaps and bounds, however.
  We'll explore a couple of different ways for file IO below.
 
 \subsection{File Read/Write}
-We can use $fopen$, $fread$, and %fprintf% for some basic file IO.
+There is the capacity for low-level IO.
+ This can be helpful when reading binar files (otherwise I would avoid it).
+ TODO: Finish this section.
 
 \begin{quote}
 \verbatiminput{code/ch05_fileio.m}
@@ -19,14 +22,14 @@ Matlab can automate the reading of most simple delimited text files.
 
 \begin{figure}[ht!]
 \centering
-\includegraphics[width=90mm]{img/path.png}
-\caption{The Matlab path window.}
-\label{overflow}
+\includegraphics[width=120mm]{img/guiload.png}
+\caption{The GUI file reader. From here you can select what subset of your data to import.}
+\label{guiload}
 \end{figure}
 
 \pagebreak
 \subsection{Save and Load}
-Matlab also has \verbatim{save} and \verbatim{load} commands that allow for direct saving of multiple Matlab variables and variable types.
+Matlab also has \emph{save} and \emph{load} commands that allow for direct saving of multiple Matlab variables and variable types.
  This is similar to Python's pickle module.
 
 \begin{quote}
