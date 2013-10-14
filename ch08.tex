@@ -28,18 +28,27 @@ When you need to run the GUI, run the .m file, not the figure.
 \pagebreak
 Here is the code for the GUI.
  I have removed many of the auto-generated comments.
- The code that actually performs most of the plotting is separated into the function ''updatePlot''.
+ What are contained here are the 'callbacks' the functions that are called when the user interacts with the GUI elements.
+ The code that actually performs most of the plotting is separated into the function ''ch08_updatePlot'.
  This practice reduces duplicate code, and allows for easier debugging of complex GUIs.
- You can even go a step further and separate the function into a separate file.
+ You can find the update function in the next section.
 
 \begin{quote}
 \verbatiminput{code/ch08_gui.m}
 \end{quote}
 
 \pagebreak
-\subsection{Manually}
-You can then use the step and continue commands to move through your code, investigating variable values as you go.
+This function updates the GUI in the previous section.
+ I've separated it here so you can see the core functions of the GUI seaparated from the callbacks.
 
 \begin{quote}
- \verbatiminput{code/TODO.m}
+\verbatiminput{code/ch08_updatePlot.m}
+\end{quote}
+
+\pagebreak
+\subsection{Manually}
+It is also possible to generate a GUI programatically.
+
+\begin{quote}
+ \verbatiminput{code/ch08_guimanual.m}
 \end{quote}
