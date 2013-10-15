@@ -44,10 +44,10 @@ varargout{1} = handles.output;
 
 %% Update if the the button, slider, radio or popup is changed
 function push_run_Callback(hObject, eventdata, handles)
-ch08_updatePlot(handles);
+ch08_updatePlot(hObject,handles,eventdata);
 
 function slider_freq_Callback(hObject, eventdata, handles)
-ch08_updatePlot(handles);
+ch08_updatePlot(hObject,handles,eventdata);
 
 %% Unused
 function popup_type_Callback(hObject, eventdata, handles)
