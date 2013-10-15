@@ -8,19 +8,33 @@ If you've been writing perfect Matlab code up to this point... congratulations.
 \subsection{Image Read and Write}
 
 \begin{quote}
-\verbatiminput{code/TODO.m}
+\verbatiminput{code/ch07_imagereadwrite.m}
 \end{quote}
 
 \pagebreak
 \subsection{Displaying Images}
+There are three frequent commands you'll use when displaying images.
+
+\emph{imshow} is the quick, catch-all image displayer.
+ It displays the image at a 1:1 pixel resolution on your monitor.
+ It deals with most of the colormaps and data types for you.
+
+\emph{image} displays the image stretched to fit the axes.
+ Both imshow and image suffer from a [0,1] cutoff in data.
+ If the data exceed these bounds (lower or upper) it will be colored the same as the bound.
+
+\emph{imagesc} stretches the image to the current axes, but also scales it so the minimum and maximum values are at the edges of the colorbar.
+ Because it scales the image, you'll always see all of the data unlinke with image.
+ However, a single very large value can throw the colorbar off.
 
 \begin{quote}
- \verbatiminput{code/TODO.m}
+ \verbatiminput{code/ch07_display.m}
 \end{quote}
 
 \pagebreak
 \subsection{Colorbars and Colormaps}
 
+
 \begin{quote}
- \verbatiminput{code/TODO.m}
+ \verbatiminput{code/ch07_colorbars.m}
 \end{quote}
