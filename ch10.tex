@@ -1,0 +1,33 @@
+
+\pagebreak
+\section{Parallelization}
+As you take on larger and more computationally intensive projects, you code can take longer to run.
+ To improve your code's run time you can take advantage of parallelization options.
+ While this guide has been largely toolbox-free, you'll need the parallel computing toolbox for this chapter.
+
+\subsection{Parfor}
+Dual, quad, or even higer CPU cores are found in modern computers.
+ You can take advantage of these CPU's by using a parfor loop.
+ Parfor (parallel for) directs matlab to different steps of the loop on your cores.
+ Since the different iterations are run on separate cores, your loop should be desiged accordingly.
+ Make sure to not have one loop depend on a previous loop's result.
+ And data needs to be constructed in a manner so that each core can recieve its part.
+ This data 'slicing' is the cause of most headaches when it comes to parallelization.
+
+\begin{quote}
+\verbatiminput{code/ch10_parfor.m}
+\end{quote}
+
+\pagebreak
+\subsection{GPU Computation}
+The GPU has a different architecture than the CPU.
+ Instead of trying to do one computation as fast as possible, they do slower computations but many more of them at once (256-1024+).
+ Matlab is integrating tightly with the NVidia cards, but options also exist for ATI cards.
+
+The GPU is not always a first-choice for speeding up code.
+ You'll need to transfer data to and from the graphics card, which will impose additional overhead time.
+ Typically graphics cards have less memory than your system, so you may run out.
+
+\begin{quote}
+ \verbatiminput{code/ch10_gpu.m}
+\end{quote}
