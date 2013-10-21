@@ -1,15 +1,80 @@
 \pagebreak
 \section{Exercises}
 
-\begin{itemize}
- \item Print
- \begin{itemize}
-  \item Can you make the ''disp'' command print a number as well?
-  \item What happens if you remove the ''$\verbatim{\n}$'' from inside the fprintf / sprintf commands?
-  \item In the format specifier ''\%\#.\#f'' what happens if you change the \# value before the ''.''? What about the one after the ''.''?
-  \item Modify the fprintf example for the matrix to print an arbitrary size matrix.
- \end{itemize}
- \item Math
- \item Matricies
+\begin{enumerate}
 
-\end{itemize}
+ \item Basics
+  \begin{enumerate}
+   \item Do some arithemetric.
+   \item Can you take the mean of a few numbers? How about their standard deviation?
+   \item Can variables begin with a number? What about special characters like \_? What numbers / characters can be used \emph{inside} a variable?
+   \item What's the difference between a cell array and a structure?
+   \item Can you make the ''disp'' command print a number as well?
+   \item In the format specifier for fprintf and sprintf, $\%A.Bf$ where A and B are integers, what does A do? What does B do? Do you have to have both?
+   \item Modify the fprintf example for the matrix to print an arbitrary size matrix.
+   \item Can you normalize a vector? (This means that V.V = 1)
+   \item Can you take the trace of a matrix?
+   \item Can you find the inverse of a matrix? (The inverse is the matrix such that $A_inverse * A = 1$ (the identity matrix).)
+  \end{enumerate}
+
+ \item Control
+  \begin{enumerate}
+   \item Print out the even numbers from 1:20 using for. Do it again using while. Now do it backwards.
+   \item Make an if-statement with multiple conditions; eg. a case if x is less than 3 or greater than 5.
+   \item Can you have multiple else statements in an if-clause?
+   \item Can you have multiple otherwise statements in a switch?
+   \item Vectorize probelm (2.a) above.
+  \end{enumerate}
+
+ \item Files and Functions
+  \begin{enumerate}
+   \item Write a function to determine if a number is prime.
+   \item Write a function that determines the prime factors of a number. Hint: use (3.a) as a subfunction.
+  \end{enumerate}
+
+ \item Plotting
+  \begin{enumerate}
+   \item Plot and annotate (title, legend, labels) three of your favorite functions. Use subplot to display them all at once. Bonus points if you write one of them as an anonymous function.
+  \end{enumerate}
+
+ \item Input and Output
+  \begin{enumerate}
+   \item Write a script that asks the user for their name and age and then mocks them mercilessly for it. Hint: Use an if statement to determine the level of mockery.
+   \item Save the data you collected in the last example to a file that you can share with the world. (But don't we're nice folk around here).
+  \end{enumerate}
+
+ \item Debugging
+  \begin{enumerate}
+   \item Debug the code in \ref{subsec:debugfile}.
+  \end{enumerate}
+
+ \item Image Processing
+  \begin{enumerate}
+   \item Take your favorite color image and save it as a black and white image.
+   \item Take the same image and invert the blue channel ($b = 1-b$), and save the output.
+   \item Take an image and apply a gaussian blur to it. (A gaussian is defined by; $g(v,\sigma) = exp(-\left( \frac{v-[0,0,0]}{\sigma}\right)^2$)
+  \end{enumerate}
+
+ \item GUIs
+  \begin{enumerate}
+   \item That data you saved in exercise 5.b... How about we display it in a GUI. Make sure you can add more entries into it. Save the data when the user exits. Optional: display a picture if you have one.
+  \end{enumerate}
+
+ \item Curve Fitting
+  \begin{enumerate}
+   \item Make some noisy data and fit it using a model. See how good the fit is if you leave out parameters. What I mean by that is: You generate data based on something like; $exp(-a*x) + b$. How good is the fit if you just use $y = exp(-a*x)$ as your model? \\
+Hint: You can make noise using the rand() function call.
+  \end{enumerate}
+
+ \item Parallelization
+  \begin{enumerate}
+   \item Make an array of 1,000 sine waves (at least 1000 points each). Take their fourier-transform (look up fft). Now do it in parallel. What if you make it 10,000 sine waves? Do you have enough memory for more?
+  \end{enumerate}
+
+ \item Style
+  \begin{enumerate}
+   \item Go through and add comments to all of your above solutions (if you wrote them with comments then give yourself a pat on the back).
+   \item No really, add the comments.
+   \item Back them up with something like SVN, GIT, HG, or a jumpdrive.
+  \end{enumerate}
+\end{enumerate}
