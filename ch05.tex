@@ -6,13 +6,17 @@ Unfortunately MATLAB really falls a bit short in input and output of files.
  We'll explore a couple of different ways for file IO below.
 
 \subsection{File Read/Write}
-There is the capacity for low-level IO.
- This can be helpful when reading binar files (otherwise I would avoid it).
- TODO: Finish this section.
+You can read in user data either from the screen or from files.
+ The first can be useful for menu switches, etc.
+ The second is obviously useful for data files.
 
 \begin{quote}
 \verbatiminput{code/ch05_fileio.m}
 \end{quote}
+
+Note: You can also do low-level IO with \emph{fopen}, \emph{fread}, and \emph{fwrite}.
+ I would avoid this at all costs, as there is usually a faster way.
+ Still, this can be helpful when reading binary files.
 
 \pagebreak
 \subsection{GUI File Read}
