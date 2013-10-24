@@ -1,11 +1,15 @@
 % Define a vector
 % x = row, y = row, z = column
 x = [1 2 3 4]
-y = [1,2,4,8]
+y = [1,2+2i,4+2i,8]
 z = [2;2;2;2]
 
-% A single quote transposes
-x'
+% A dot-quote does the transpose
+x.'
+% You can get the conjugate transpose with just the quote
+y
+y.'
+y'
 
 % We can generate vectors with a colon
 % The syntax is start:increment:end

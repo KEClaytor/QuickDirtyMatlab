@@ -31,3 +31,10 @@ plot(t,c);
 subplot('position',[.3,.3,.5,.5]);
 plot(t,hc);
 
+%% You can get around this by just specifying a new axes
+figure;
+subplot('position',[.2,.6,.5,.3]); plot(t,s);
+subplot('position',[.5,.1,.4,.3]); plot(t,c);
+% Our new axes will overlap
+axes('position',[.3,.3,.5,.5]);
+plot(t,hc);

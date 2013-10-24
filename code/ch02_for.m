@@ -3,6 +3,8 @@
 %     code
 % end
 disp('Basic for loop.')
+% Note I'm using ii as the iterator
+%  to avoid confusion with i = sqrt(-1)
 for ii = 1:10
     disp(ii)
 end

@@ -21,6 +21,7 @@ A*z     % works
 A*x     % doesn't work
 % Solve a linear algebra system
 A\z
+A*pinv(z)
 
 % Concatanation can make the vectors longer
 [A,z]
@@ -34,8 +35,11 @@ A(1:2,3)
 %  A colon accesses the entire dimension
 A(1,:)      % First row all columns
 A(:,end)    % last column, all rows
-A(:)        % Only a colon flattens the matrix (useful for max/min)
 A(1:2:end,:)% Extract odd rows with a subvector
+A(:)        % Only a colon flattens the matrix
+% This is useful for max/min operations
+max(A(:))   % Max of all elements
+max(A)      % Max of rows
 %  Or even mathematical expressions
 %  (This is called 'logcal' indexing)
 A( A>3 )    % Note this also flattens A

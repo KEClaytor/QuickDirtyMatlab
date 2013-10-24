@@ -17,7 +17,7 @@ tic;
 z = x.^3 + y.^(-1/2);
 toc
 
-% Thigs also speed up when we pre-allocate memory
+% Things also speed up when we pre-allocate memory
 z = zeros(size(x));
 tic;
 z = x.^3 + y.^(-1/2);

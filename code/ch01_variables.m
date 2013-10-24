@@ -29,8 +29,12 @@ c*c2
 c/c2
 
 % There are some mathematical constants built in.
-%  it would be wise to name your variables something else
 pi
 exp(1)
 i
 j
+
+% Be careful! You can overwrite these
+i^2
+i = 2
+i^2

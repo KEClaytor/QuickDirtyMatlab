@@ -19,8 +19,8 @@ pi*2*1
 (5+2)*2 - 4
 
 % You can use more built-in commands as well
-sin(90)
-sin( 90*(180/pi) )
+sin(pi/2)
+sind( 90*(180/pi) )
 sqrt(25)
-cos(5.324) + sin(5.324)
+cos(5.324)^2 + sin(5.324)^2
 

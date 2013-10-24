@@ -21,15 +21,17 @@ switch x
 end
 
 % I often use it for strings
-%  but watch the case
+%  but watch the capitaliztion case
 x = 'FOO';
 switch x
     case 'bar'
         disp('bar');
     case 'foo'
         disp('foo');
+        disp('we passed this');
     case 'FOO'
         disp('FOO');
+        disp('we found this');
     otherwise
         disp('no match for x!');
 end
