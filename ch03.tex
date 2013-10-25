@@ -98,7 +98,13 @@ Sometimes you have need for a small function, but don't want to write a separate
 How does Matlab find your functions?
  They can be in one of two places; the current directory or the path.
  The path stores the list of files Matlab looks through in order to find functions and scripts.
- Here's what it looks like in R2013a:
+ The command ''pathtool'' puls up a GUI interface that allows us to add and remove folders from the path.
+ When you're done, you can save the path, and Matlab will attempt to load these folders when it starts in the future.
+ The figure below shows what this looks like in Matlab R2013a.
+
+You can either change the path using commands such as ''addpath'' and ''rmpath''.
+ Additionally, if you want to find out where a certain function resides, you can use ''which''.
+ For example, ''which('plot.m')'' or ''which plot''.
 
 \begin{figure}[ht!]
 \centering

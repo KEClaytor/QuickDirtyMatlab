@@ -28,6 +28,11 @@ The GPU is not always a first-choice for speeding up code.
  You'll need to transfer data to and from the graphics card, which will impose additional overhead time.
  Typically graphics cards have less memory than your system, so you may run out.
 
+Also, not all graphics cards are created equal.
+ Matlab data defaults to double-precision floating point.
+ Not all cards support this precision, and may re-cast your data as single-precision.
+ You can check this with the ''classUnderlying()'' function.
+
 \begin{quote}
  \verbatiminput{code/ch10_gpu.m}
 \end{quote}

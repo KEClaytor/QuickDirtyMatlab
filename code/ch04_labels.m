@@ -40,3 +40,7 @@ set(ax2,'YTickLabel',{});
 % Note that if you save the figure, the name is not saved
 set(h,'Name','Sine and Cosine');
 
+%% Floating text label
+axes(ax1); text(1.00,0,'Sine');
+axes(ax2); text(1.25,0,'Cosine');
+
