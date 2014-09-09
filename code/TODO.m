@@ -1,5 +1,3 @@
-% Filler file.
-% Updated test
 % TODO  TODO  TODO  TODO
 % TODO  TODO  TODO  TODO
 % TODO  TODO  TODO  TODO
